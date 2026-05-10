@@ -2,8 +2,6 @@ import cloudinary from "../lib/cloudinary.js";
 import { generateToken } from "../lib/utils.js";
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import cloudinary from "../lib/cloudinary.js";
-
 
 export const signup = async (req, res) => {
     const {fullName, email, password} = req.body;
@@ -50,8 +48,6 @@ export const signup = async (req, res) => {
         res.status(500).json({message: "Server error"});
     }
 };
-
-//login 47:37
 export const login = async(req, res) => {
     const {email, password} = req.body;
     try {
@@ -82,7 +78,6 @@ export const login = async(req, res) => {
 
     }
 };
-
 export const logout = (req, res) => {
     try{
         res.cookie("jwt", "",{maxAge: 0});
@@ -93,8 +88,6 @@ export const logout = (req, res) => {
         res.status(500).json({message: "Server error"});
     }
 };
-
-
 export const updateProfile = async (req, res) => {
     try{
         const {profilePic} = req.body;
@@ -120,5 +113,5 @@ export const checkAuth = (req, res) => {
         console.log("Error in checkAuth:Error in checkAuth controller: ", error);
         res.status(500).json({message: "Server error"});
     }
-    //1:11:58
+    
 };
