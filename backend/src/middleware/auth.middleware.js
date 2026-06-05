@@ -8,7 +8,6 @@ export const protectRoute = async (req, res, next) => {
         if (!token) {
             return res.status(401).json({message: "Not authorized, no token"});
         }
-
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         if (!decoded || !decoded.userId) {
@@ -28,6 +27,6 @@ export const protectRoute = async (req, res, next) => {
         console.log("Error in protectRoute middleware: ", error.message);
         res.status(500).json({message: "Internal server error"});
     }
-    //1:12:58
+
        
 };

@@ -12,6 +12,7 @@ import {
 import { useAuthStore } from "../store/useAuthStore";
 import AuthImagePattern from "../components/AuthImagePattern";
 
+
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -42,6 +43,7 @@ const LoginPage = () => {
                 bg-primary/10 transition-colors group-hover:bg-primary/20"
               >
                 <MessageSquare className="h-6 w-6 text-primary" />
+                {/*<img src={logo} alt="Logo" className="h-full w-full object-cover" />*/}
               </div>
 
               <h1 className="mt-2 text-2xl font-bold">
@@ -174,3 +176,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+

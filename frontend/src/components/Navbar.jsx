@@ -22,7 +22,7 @@ const Navbar = () => {
                 <MessageSquare className="h-5 w-5 text-primary" />
               </div>
 
-              <h1 className="text-lg font-bold">Chaty</h1>
+              <h1 className="text-lg font-bold">CHAT AHTECH</h1>
             </Link>
           </div>
 
